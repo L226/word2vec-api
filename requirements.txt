@@ -1,0 +1,5 @@
+Flask==0.10.1
+Flask-RESTful==0.3.6
+gensim==2.1.0
+requests==2.9.1
+requests-futures==0.9.7
