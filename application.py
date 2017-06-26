@@ -15,6 +15,7 @@ api = Api(app)
 
 HOST_URL = "http://localhost:8000"
 MODEL_PATH = os.environ.get('MODEL_PATH', '~/Downloads/GoogleNews-vectors-negative300.bin')
+LOCAL = os.environ.get('LOCAL',1)
 
 try:
 	if not LOCAL:
