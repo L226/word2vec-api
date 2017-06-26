@@ -14,7 +14,6 @@ RUN wget https://s3.amazonaws.com/mordecai-geo/GoogleNews-vectors-negative300.bi
 RUN gzip -d GoogleNews-vectors-negative300.bin.gz
 # RUN rm GoogleNews-vectors-negative300.bin.gz
 
-ENV LOCAL 0
 ENV MODEL_PATH GoogleNews-vectors-negative300.bin
 EXPOSE 8000
 

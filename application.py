@@ -15,7 +15,7 @@ api = Api(app)
 
 HOST_URL = "http://localhost:8000"
 MODEL_PATH = os.environ.get('MODEL_PATH', '~/Downloads/GoogleNews-vectors-negative300.bin')
-LOCAL = os.environ.get('LOCAL',1)
+LOCAL = os.environ.get('LOCAL', False)
 
 try:
 	if not LOCAL:
@@ -32,7 +32,7 @@ def get_word_distance(w1, w2):
 	"""
 	try:
 		# word in model
-		res = MODEL.similarity('w1', 'w2')
+		res = MODEL.similarity(w1, w2)
 		return json.dumps(res)
 	except Exception as err: # gensim exception class?
 		logging.warning("similarity check error: %s" % err)
