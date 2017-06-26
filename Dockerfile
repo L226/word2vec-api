@@ -11,6 +11,8 @@ RUN pip install -r requirements.txt
 # RUN tar -xzvf GoogleNews-vectors-negative300.bin.gz
 
 RUN wget https://s3.amazonaws.com/mordecai-geo/GoogleNews-vectors-negative300.bin.gz
+# if this fails, see download_file.py for attempt to download from Google drive
+
 RUN gzip -d GoogleNews-vectors-negative300.bin.gz
 # RUN rm GoogleNews-vectors-negative300.bin.gz
 
